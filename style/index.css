@@ -1,0 +1,14 @@
+.menu > .menu-item {
+  padding: 10px 0;
+  font-size: 130%;
+  font-weight: bold;
+}
+.menu > .menu-item > .menu-link {
+    text-decoration: none;
+    color: rgb(59, 104, 218);
+    transition: .3s;
+}
+
+.menu > .menu-item > .menu-link:hover {
+    color: rgb(16, 44, 116);
+}
