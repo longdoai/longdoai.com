@@ -88,15 +88,8 @@ function addColor(
   return nextCode;
 }
 
-function addColorSymbolTag(codeStr) {
-  return codeStr
-    .replaceAll("<!", "")
-    .replaceAll("</", '<span class="code-symbol">&lt;/</span>')
-    .replaceAll("<", '<span class="code-symbol">&lt;</span>')
-    .replaceAll(">", '<span class="code-symbol">&gt;</span>');
-}
+
 function submitStyleCode(codeObj) {
-  codeObj.code = addColorSymbolTag(codeObj.code);
   codeObj.replaces.forEach(function (replace) {
     codeObj.code = codeObj.code.replaceAll(
       replace.replaceName,
