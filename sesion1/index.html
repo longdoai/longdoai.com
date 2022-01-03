@@ -1,28 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài 1: Giưới thiệu HTML</title>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
+
 <body>
-    <h1>Bài 1 - Giới thiệu HTML</h1>
-    <div>
-        <h3>Khái niệm:</h3>
-        <h3>Cấu trúc file html:</h3>
-        <code>
-            <!DOCTYPE html>
-            <html lang="en">
+
+    <div class="container">
+        <div class="page-title">
+            <h2>Bài 1 - Giới thiệu HTML</h2>
+        </div>
+        <div class="page-content">
+            <h3 class="sub-title">I. Khái niệm:</h3>
+            <h3 class="sub-title">II. Cấu trúc file html</h3>
+            <noscript class="code">
+                <!DOCTYPE html>
+                <html lang="en">
+
                 <head>
                     <!-- khai báo tài nguyên trang web   -->
-                    <title>Document</title>
+                    <title>Tiêu đề trang web</title>
                 </head>
+
                 <body>
                     <!-- Nội dung trang web  -->
                 </body>
-            </html>
-        </code>
+
+                </html>
+            </noscript>
+            <h3 class="sub-title">III. Thẻ</h3>
+            <h4 class="small-title">1. Loại thẻ</h4>
+            <ul class="ml-4">
+                <li>Thẻ mở và đóng</li>
+                <li>Chỉ có thẻ mở</li>
+            </ul>
+            <h4 class="small-title">2. Cú pháp</h4>
+            <ul class="ml-4">
+                <li>Thẻ mở:
+                    <noscript class="code">
+                        <tag_name attribute="value" ...>
+                    </noscript>
+                </li>
+                <li>Thẻ đóng:
+                    <noscript class="code">
+                        </tag_name>
+                    </noscript>
+                </li>
+                <li>Loại thẻ chỉ có thẻ mở:
+                    <noscript class="code">
+                        <tag_name attribute="value" ... />
+                    </noscript>
+                </li>
+            </ul>
+        </div>
     </div>
+    <div id="btn_home"></div>
+    <script src="../js//main.js"></script>
 </body>
+
 </html>
