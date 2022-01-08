@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn bản và danh sách</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="page-title">
+            <h2>Bài 2 - Văn bản và danh sách</h2>
+        </div>
+        <div class="page-content">
+            <h3 class="sub-title">I. Heading và thẻ văn bản</h3>
+            <h1>Thẻ <span class="code-tag-name">&lt;h1&gt;</span></h1>
+            <h2>Thẻ <span class="code-tag-name">&lt;h2&gt;</span></h2>
+            <h3>Thẻ <span class="code-tag-name">&lt;h3&gt;</span></h3>
+            <h4>Thẻ <span class="code-tag-name">&lt;h4&gt;</span></h4>
+            <h5>Thẻ <span class="code-tag-name">&lt;h5&gt;</span></h5>
+            <h6>Thẻ <span class="code-tag-name">&lt;h6&gt;</span></h6>
+            <p>Thẻ văn bản <span class="code-tag-name">&lt;p&gt;</span></p>
+            <h4 class="small-title">1. Một số thẻ định dạng văn bản</h4>
+            <ul class="ml-4">
+                <li><span class="code-tag-name bold">&lt;br /&gt;</span>: Ngắt dòng</li>
+                <li>
+                    <span class="code-tag-name bold">&lt;pre /&gt;</span>: <pre>Giữ nguyên các khoảng trắng và dấu newline trong đoạn văn</pre>
+                </li>
+                <li><span class="code-tag-name bold">&lt;blockquote /&gt;</span>: <blockquote>Lời trích dẫn / câu nói nguyên văn</blockquote></li>
+                <li><span class="code-tag-name bold">&lt;b /&gt;</span>: <b>In đậm</b></li>
+                <li><span class="code-tag-name bold">&lt;i /&gt;</span>: <i>In nghiêng</i></li>
+                <li><span class="code-tag-name bold">&lt;u /&gt;</span>: <u>Gạch chân</u></li>
+                <li><span class="code-tag-name bold">&lt;em /&gt;</span>: <em>In nghiêng + nhấn mạnh</em></li>
+                <li><span class="code-tag-name bold">&lt;strong /&gt;</span>: <strong>In đậm + nhấn mạnh</strong></li>
+                <li><a href="https://www.w3schools.com/html/html_formatting.asp">Tìm hiểu thêm</a></li>
+            </ul>
+            <h4 class="small-title">2. Các thẻ diễn giải nội dung trong HTML</h4>
+            <ul class="ml-4">
+                <li>
+                    <span class="code-tag-name bold">&lt;abbr&gt;</span>: Mô tả từ viết tắt
+                    <p>Ví dụ: <abbr title="HyperText Markup Language">HTML</abbr> là gì?</p>
+                </li>
+                <li>
+                    <span class="code-tag-name bold">&lt;dfn&gt;</span>: Định nghĩa 1 thuật ngữ
+                    <p>VÍ dụ: <dfn title="HyperText Markup Language">HTML</dfn> is the standard markup language for creating web pages.</p>
+                </li>
+                <li>
+                    <span class="code-tag-name bold">&lt;hr&gt;</span>: Tạo đường kẻ ngang.
+                    <p>Ví dụ: <hr /></p>
+                </li>
+            </ul>
+
+            <h3 class="sub-title">II. Danh sách</h3>
+            <h4 class="small-title">1. Danh sách k có thứ tự &lt;ul&gt;</h4>
+            <p>Mỗi phần tử bên trong là 1 thẻ &lt;li&gt;</p>
+            <noscript class="code">
+                <ul>
+                    <li>Phần tử 1</li>
+                    <li>Phần tử 2</li>
+                </ul>
+            </noscript>
+                        
+            <div class="result">
+                <span class="result-title">Kêt quả: </span>
+                <ul class="ml-5">
+                    <li>Phần tử 1</li>
+                    <li>Phần tử 2</li>
+                </ul>
+            </div>
+            <h4 class="small-title">1. Danh sách có thứ tự &lt;ol&gt;</h4>
+            <p>Định nghĩa kiểu thứ tự bằng thuộc tính <b>type</b></p>
+            <p>giá trị của <b>type</b> tham khảo thêm <a href="https://www.w3schools.com/html/html_lists_ordered.asp">tại đây.</a></p>
+
+            <noscript class="code">
+                <ol type="I">
+                    <li>Heading và thẻ văn bản <br>...</li>
+                    <li>Danh sách
+                        <ol type="1">
+                            <li>Danh sách không có thứ tự</li>
+                            <li>Danh sách có thứ tự</li>
+                        </ol>
+                    </li>
+                </ol>
+            </noscript>
+
+            <div class="result">
+                <span class="result-title">Kêt quả: </span>
+                <ol type="I" class="ml-5">
+                    <li>Heading và thẻ văn bản <br>...</li>
+                    <li>Danh sách
+                        <ol type="1">
+                            <li>Danh sách không có thứ tự</li>
+                            <li>Danh sách có thứ tự</li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+
+            <h4 class="small-title">3. Danh sách diễn giải &lt;dl&gt;</h4>
+            <noscript class="code">
+                <dl>
+                    <dt> Name1 </dt>
+                    <dd> Value1 </dd>
+                    <dd> Value2 </dd>
+                    ...
+                    <dt> Name2 </dt>
+                    <dd> Value1 </dd>
+                    <dd> Value2 </dd>
+                    <dd> Value3 </dd>
+                    ...
+                </dl>
+            </noscript>
+            
+            <div class="result">
+                <span class="result-title">Kêt quả: </span>
+                <dl class="ml-5">
+                    <dt> Name1 </dt>
+                    <dd> Value1 </dd>
+                    <dd> Value2 </dd>
+                    ...
+                    <dt> Name2 </dt>
+                    <dd> Value1 </dd>
+                    <dd> Value2 </dd>
+                    <dd> Value3 </dd>
+                    ...
+                   </dl>
+            </div>
+        </div>
+    </div>
+    <div id="btn_home"></div>
+    <script src="../js//main.js"></script>
+</body>
+</html>

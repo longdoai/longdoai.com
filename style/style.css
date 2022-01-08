@@ -71,6 +71,10 @@ body {
   margin-left: 15px;
 }
 
+.ml-5 {
+  margin-left: 20px;
+}
+
 .sub-title {
   margin-bottom: 8px;
 }
@@ -101,4 +105,20 @@ body {
 
 .code-comment {
   color: green;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.result{
+  border: 1px solid steelblue;
+  border-radius: 10px;
+  background-color: rgb(255, 230, 231);
+  padding: 10px 15px;
+}
+
+.result-title{
+  font-weight: bold;
+  font-size: 20px;
 }
