@@ -52,7 +52,6 @@ function addColor(
   replaceValue
 ) {
   var attrs = [...codeStr.matchAll(regex)];
-  if (replaceName == "tagName") console.log(attrs);
   var nextCode = {
     code: codeStr,
     replaces: [],
@@ -119,8 +118,21 @@ function handleStyleCode(code) {
     }
   );
 
-  var codeAfterAddColorValueAttr = addColor(
+  var codeAfterAddColorTagName = addColor(
     codeAfterAddColorComment.code,
+    /<\/?\s*\w+/g,
+    "tagName",
+    true,
+    { subStart: 1, subEnd: 0 },
+    {
+      prefix: '<span class="code-tag-name">',
+      suffix: "</span>",
+      subStart: 1,
+      subEnd: 0,
+    }
+  );
+  var codeAfterAddColorValueAttr = addColor(
+    codeAfterAddColorTagName.code,
     /"(.+?)"/g,
     "valueAttr",
     true,
@@ -146,21 +158,8 @@ function handleStyleCode(code) {
       subEnd: 1,
     }
   );
-  var codeAfterAddColorTagName = addColor(
-    codeAfterAddColorAttr.code,
-    /<\/?\s*\w+/g,
-    "tagName",
-    true,
-    { subStart: 1, subEnd: 0 },
-    {
-      prefix: '<span class="code-tag-name">',
-      suffix: "</span>",
-      subStart: 1,
-      subEnd: 0,
-    }
-  );
   var codeAfterAddColorSymbolDoctype = addColor(
-    codeAfterAddColorTagName.code,
+    codeAfterAddColorAttr.code,
     /<!/g,
     "doctype",
     false,
@@ -219,15 +218,16 @@ function handleStyleCode(code) {
     code: codeAfterAddColorSymbolCloseTag.code,
     replaces: [
       ...codeAfterAddColorComment.replaces,
+      ...codeAfterAddColorTagName.replaces,
       ...codeAfterAddColorValueAttr.replaces,
       ...codeAfterAddColorAttr.replaces,
-      ...codeAfterAddColorTagName.replaces,
       ...codeAfterAddColorSymbolDoctype.replaces,
       ...codeAfterAddColorSymbolOpenOfTagClose.replaces,
       ...codeAfterAddColorSymbolOpenTag.replaces,
       ...codeAfterAddColorSymbolCloseTag.replaces,
     ],
   };
+
 
   return submitStyleCode(nextCode);
 }
@@ -244,6 +244,20 @@ function handleRenderCode() {
   });
 }
 
+
+function handleStyleExample() {
+  var divEx = document.querySelectorAll('div.example');
+  divEx.forEach(ex => {
+    var viewMore = document.createElement('span');
+    viewMore.className = "viewmore";
+    viewMore.innerText = "Xem Thêm";
+    viewMore.onclick = (e) => {
+      ex.classList.add('open')
+    }
+    ex.append(viewMore)
+  })
+}
+
 window.onload = function () {
   addWebTitle();
 
@@ -253,4 +267,5 @@ window.onload = function () {
   }
 
   handleRenderCode();
+  handleStyleExample();
 };

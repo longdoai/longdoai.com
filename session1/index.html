@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài 1: Giưới thiệu HTML</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../assets/style/style.css">
 </head>
 
 <body>
@@ -15,51 +15,78 @@
             <h2>Bài 1 - Giới thiệu HTML</h2>
         </div>
         <div class="page-content">
-            <h3 class="sub-title">I. Khái niệm:</h3>
-            <h3 class="sub-title">II. Cấu trúc file html</h3>
-            <noscript class="code">
-                <!DOCTYPE html>
-                <html lang="en">
-
-                <head>
-                    <!-- khai báo tài nguyên trang web   -->
-                    <title>Tiêu đề trang web</title>
-                </head>
-
-                <body>
-                    <!-- Nội dung trang web  -->
-                </body>
-
-                </html>
-            </noscript>
-            <h3 class="sub-title">III. Thẻ</h3>
-            <h4 class="small-title">1. Loại thẻ</h4>
-            <ul class="ml-4">
-                <li>Thẻ mở và đóng</li>
-                <li>Chỉ có thẻ mở</li>
-            </ul>
-            <h4 class="small-title">2. Cú pháp</h4>
-            <ul class="ml-4">
-                <li>Thẻ mở:
+            <ol type="I" class="session-list">
+                <li>
+                    <h3 class="sub-title">Khái niệm:</h3>
+                </li>
+                <li>
+                    <h3 class="sub-title">Cấu trúc file html</h3>
                     <noscript class="code">
-                        <tag_name attribute="value" ...>
+                        <!DOCTYPE html>
+                        <html lang="en">
+
+                        <head>
+                            <!-- khai báo tài nguyên trang web   -->
+                            <title>Tiêu đề trang web</title>
+                        </head>
+
+                        <body>
+                            <!-- Nội dung trang web  -->
+                        </body>
+
+                        </html>
                     </noscript>
                 </li>
-                <li>Thẻ đóng:
-                    <noscript class="code">
-                        </tag_name>
-                    </noscript>
+                <li>
+                    <h3 class="sub-title">Thẻ</h3>
+                    <ol type="1" class="session-sub-list">
+                        <li>
+                            <h4 class="small-title">Loại thẻ</h4>
+                            <ul class="mark session-sub-content">
+                                <li>
+                                    <h5 class="mark-title">Thẻ mở và đóng</h5>
+                                </li>
+                                <li>
+                                    <h5 class="mark-title">Chỉ có thẻ mở</h5>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="small-title">Cú pháp</h4>
+                            <ul class="mark session-sub-content">
+                                <li>
+                                    <h5 class="mark-title">Thẻ mở</h5>
+                                    <div>
+                                        <noscript class="code">
+                                            <tag_name attribute="value" ...>
+                                        </noscript>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h5 class="mark-title">Thẻ đóng</h5>
+                                    <div>
+                                        <noscript class="code">
+                                            </tag_name>
+                                        </noscript>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h5 class="mark-title">Loại thẻ chỉ có thẻ mở</h5>
+                                    <div>
+                                        <noscript class="code">
+                                            <tag_name attribute="value" ... />
+                                        </noscript>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
                 </li>
-                <li>Loại thẻ chỉ có thẻ mở:
-                    <noscript class="code">
-                        <tag_name attribute="value" ... />
-                    </noscript>
-                </li>
-            </ul>
+            </ol>
         </div>
     </div>
     <div id="btn_home"></div>
-    <script src="../js//main.js"></script>
+    <script src="../assets/js//main.js"></script>
 </body>
 
 </html>
