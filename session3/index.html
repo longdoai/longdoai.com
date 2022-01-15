@@ -1,15 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài 3: Image, Link, Table</title>
     <link rel="stylesheet" href="../style/style.css">
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="page-title">
+            <h2>Bài 3 - Image, Link, Table</h2>
+        </div>
+        <div class="page-content">
+            <ol type="I">
+                <li>
+                    <h3 class="sub-title">Image</h3>
+                    <div>
+                        <ol type="1">
+                            <li>
+                                <h4 class="small-title">Cú pháp</h4>
+                                <div>
+                                    <noscript class="code">
+                                        <img src="https://st.quantrimang.com/photos/image/2019/06/27/demo-la-gi-2.jpg"
+                                            alt="Hình ảnh" />
+                                        <img src="../assets/images/image_demo.jpg" alt="Hình ảnh" />
+                                        <img src="./image_demo_2.jpg" alt="Hình ảnh" />
+                                        <img src="/image_demo_root.jpg" alt="Hình ảnh" />
+                                    </noscript>
+
+                                    <img src="https://st.quantrimang.com/photos/image/2019/06/27/demo-la-gi-2.jpg"
+                                        alt="Hình ảnh" width="200" height="200" /> <br>
+                                    <img src="../assets/images/image_demo.jpg" alt="Hình ảnh" width="200"
+                                        height="200" /> <br>
+                                    <img src="./image_demo_2.jpg" alt="Hình ảnh" width="200" height="200" /> <br>
+                                    <img src="/image_demo_root.jpg" alt="Hình ảnh" width="200" height="200" />
+                                </div>
+                            </li>
+                            <li>
+                                <h4 class="small-title">Thuộc tính</h4>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <h5>src</h5>
+                                            <div>
+                                                Đường dẫn của hình ảnh. <br>
+                                                Có thể là đường dẫn tuyệt đối hoặc tương đối.
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h5>alt</h5>
+                                            <div>
+                                                Mô tả hình ảnh, hiển thị khi hình ảnh lỗi.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h3 class="sub-title">Link</h3>
+                    <div>
+                        <ol type="1">
+                            <li>
+                                <h4 class="small-title">Cú pháp</h4>
+                                <div>
+                                    <noscript class="code">
+                                        <a href="url">Text of Link</a>
+                                    </noscript>
+
+                                    <a href="https://google.com">Google</a><br>
+                                    <a href="./link_demo.html">Test link</a><br>
+                                    <a href="./link_demo.html" target="_blank">Test link target</a><br>
+                                    <a href="mailto:longdoairv@gmail.com" target="_blank">Test link mail</a><br>
+                                    <a href="tel:0935906860" target="_blank">Test link call</a><br>
+                                </div>
+                            </li>
+                            <li>
+                                <h4 class="small-title">Thuộc tính</h4>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <h5>href</h5>
+                                            <div>
+                                                Đường dẫn của link.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h3 class="sub-title">Table</h3>
+                    <div>
+                        <ol type="1">
+                            <li>
+                                <h4 class="small-title">Cú pháp</h4>
+                                <div>
+                                    <noscript class="code">
+                                        <table>
+                                            <tr>
+                                                <td>Cell</td>
+                                            </tr>
+                                        </table>
+                                    </noscript>
+
+                                    <div>
+                                        <h6>Table 2 cột 2 dòng</h6>
+                                    </div>
+                                    <noscript class="code">
+                                        <table>
+                                            <tr>
+                                                <td>Cell 1-1</td>
+                                                <td>Cell 2-1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cell 1-2</td>
+                                                <td>Cell 2-2</td>
+                                            </tr>
+                                        </table>
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kêt quả: </span>
+                                        <table>
+                                            <tr>
+                                                <td>Cell 1-1</td>
+                                                <td>Cell 2-1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cell 1-2</td>
+                                                <td>Cell 2-2</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <noscript class="code">
+                                        <table>
+                                            <tr>
+                                                <td colspan="4">Jill</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Smith</td>
+                                                <td>Smith</td>
+                                                <td>Smith</td>
+                                                <td>Smith</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">Jill</td>
+                                                <td>Smith</td>
+                                                <td>Smith</td>
+                                                <td>Smith</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Smith</td>
+                                                <td>Smith</td>
+                                                <td>Smith</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jill</td>
+                                                <td colspan="2" rowspan="3">Smith</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jill</td>
+                                                <td>Smith</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jill</td>
+                                                <td>Smith</td>
+                                            </tr>
+                                        </table>
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kêt quả: </span>
+
+                                        <table>
+                                            <tr>
+                                                <td colspan="4">Jill</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Smith</td>
+                                                <td>Smith</td>
+                                                <td>Smith</td>
+                                                <td>Smith</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">Jill</td>
+                                                <td>Smith</td>
+                                                <td>Smith</td>
+                                                <td>Smith</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Smith</td>
+                                                <td>Smith</td>
+                                                <td>Smith</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jill</td>
+                                                <td colspan="2" rowspan="3">Smith</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jill</td>
+                                                <td>Smith</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jill</td>
+                                                <td>Smith</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <h4 class="small-title">Thuộc tính</h4>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <h5>colspan</h5>
+                                            <div>
+                                                Số cột ô đó chiếm
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h5>rowspan</h5>
+                                            <div>
+                                                Số hàng ô đó chiếm
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
     <div id="btn_home"></div>
     <script src="../js//main.js"></script>
 </body>
+
 </html>
