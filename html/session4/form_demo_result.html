@@ -16,7 +16,8 @@
             <li><b>Tuổi: </b> <span id="age"></span></li>
             <li><b>Mật khẩu: </b> <span id="password"></span></li>
             <li><b>Ăn Chay: </b> <span id="an_chay"></span></li>
-            <li><b>Thích nghệ sỹ: </b> <span id="like_people"></span></li>
+            <li><b>Nghệ sỹ yêu thích: </b> <span id="like_people"></span></li>
+            <li><b>Món ăn yêu thích: </b> <span id="foods"></span></li>
             <li><b>Giới tính: </b> <span id="gender"></span></li>
             <li><b>Mô tả: </b> <span id="description"></span></li>
             <li><b>Đồng ý điều khoản: </b> <span id="argee"></span></li>
@@ -32,6 +33,7 @@
         var password = url.searchParams.get("password");
         var anChay = url.searchParams.get("an_chay");
         var likePeople = url.searchParams.getAll("like_people");
+        var foods = url.searchParams.getAll("foods");
         var gender = url.searchParams.get("gender");
         var description = url.searchParams.get("description");
         var argee = url.searchParams.get("argee");
@@ -51,6 +53,7 @@
         document.getElementById('password').innerText = password;
         document.getElementById('an_chay').innerText = anChay;
         document.getElementById('like_people').innerText = likePeople.join(', ');
+        document.getElementById('foods').innerText = foods.join(', ');
         document.getElementById('gender').innerText = gender;
         document.getElementById('description').innerText = description;
         document.getElementById('argee').innerText = argee;

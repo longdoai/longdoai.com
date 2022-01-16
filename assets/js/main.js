@@ -5,7 +5,14 @@
 function addWebTitle() {
   var webTitle = document.createElement("h1");
   webTitle.className = "web-title";
-  webTitle.innerText = "Học lập trình HTML";
+
+  var webTitleText = "Học lập trình cơ bản";
+  if (/^\/html/.test(window.location.pathname)) {
+    webTitleText = "Học lập trình HTML";
+  } else if (/^\/css/.test(window.location.pathname)) {
+    webTitleText = "Học lập trình CSS";
+  }
+  webTitle.innerText = webTitleText;
 
   var body = document.querySelector("body");
   body.append(webTitle);
@@ -117,15 +124,14 @@ function handleStyleCode(code) {
       subEnd: 7,
     }
   );
-
   var codeAfterAddColorTagName = addColor(
     codeAfterAddColorComment.code,
     /<\/?\s*\w+/g,
     "tagName",
     true,
-    { subStart: 1, subEnd: 0 },
+    { subStart: 0, subEnd: 0 },
     {
-      prefix: '<span class="code-tag-name">',
+      prefix: '<span class="code-symbol">&lt;</span><span class="code-tag-name">',
       suffix: "</span>",
       subStart: 1,
       subEnd: 0,
@@ -134,7 +140,7 @@ function handleStyleCode(code) {
   var codeAfterAddColorValueAttr = addColor(
     codeAfterAddColorTagName.code,
     /"(.+?)"/g,
-    "valueAttr",
+    "valAttr",
     true,
     { subStart: 0, subEnd: 0 },
     {
@@ -186,22 +192,36 @@ function handleStyleCode(code) {
       subEnd: 0,
     }
   );
-  var codeAfterAddColorSymbolOpenTag = addColor(
+  // var codeAfterAddColorSymbolOpenTag = addColor(
+  //   codeAfterAddColorSymbolOpenOfTagClose.code,
+  //   /</g,
+  //   "lt",
+  //   false,
+  //   { subStart: 0, subEnd: 0 },
+  //   {
+  //     prefix: '<span class="code-symbol">',
+  //     value: "&lt;",
+  //     suffix: "</span>",
+  //     subStart: 0,
+  //     subEnd: 0,
+  //   }
+  // );
+  var codeAfterAddColorSymbolCloseTagM = addColor(
     codeAfterAddColorSymbolOpenOfTagClose.code,
-    /</g,
-    "lt",
+    /\/>/g,
+    "xgt",
     false,
     { subStart: 0, subEnd: 0 },
     {
       prefix: '<span class="code-symbol">',
-      value: "&lt;",
+      value: "/&gt;",
       suffix: "</span>",
       subStart: 0,
       subEnd: 0,
     }
   );
   var codeAfterAddColorSymbolCloseTag = addColor(
-    codeAfterAddColorSymbolOpenTag.code,
+    codeAfterAddColorSymbolCloseTagM.code,
     />/g,
     "gt",
     false,
@@ -223,7 +243,7 @@ function handleStyleCode(code) {
       ...codeAfterAddColorAttr.replaces,
       ...codeAfterAddColorSymbolDoctype.replaces,
       ...codeAfterAddColorSymbolOpenOfTagClose.replaces,
-      ...codeAfterAddColorSymbolOpenTag.replaces,
+      ...codeAfterAddColorSymbolCloseTagM.replaces,
       ...codeAfterAddColorSymbolCloseTag.replaces,
     ],
   };
@@ -244,10 +264,8 @@ function handleRenderCode() {
   });
 }
 
-
 function handleStyleExample() {
   var divEx = document.querySelectorAll('div.example');
-  console.log(divEx)
   divEx.forEach(ex => {
     var viewMore = document.createElement('span');
     viewMore.className = "viewmore";

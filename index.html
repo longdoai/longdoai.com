@@ -8,19 +8,85 @@
     <title>Long Doai HTML</title>
     <link rel="stylesheet" href="./assets/style/style.css">
     <style>
-        .menu>.menu-item {
-            padding: 10px 0;
+        .language-list {
+            margin-top: 30px;
+            padding-left: 15px;
+            list-style: none;
+        }
+        .language-list > .language-item {
+            position: relative;
+            padding-left: 15px;
+            line-height: 25px;
+            margin-bottom: 20px;
+        }
+
+        .language-list > .language-item.open > h3::before {
+            content: "-";
+        }
+
+        .language-list > .language-item > h3::before {
+            position: absolute;
+            left: -25px;
+            content: "+";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            line-height: 30px;
+            margin-right: 10px;
+            color: rgb(127, 127, 143);
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid rgb(190, 190, 190);
+            width: 30px;
+            border-radius: 3px;
+            transition: .3s;
+        }
+
+        .language-list > .language-item > h3 {
+            line-height: 30px;
+            font-size: 25px;
+            color: rgb(25, 23, 129);
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .language-list > .language-item > h3:hover {
+            color: rgb(11, 10, 83);
+        }
+
+        .language-list > .language-item > h3:hover::before {
+            color: rgb(11, 10, 83);
+            transform: scale(1.1);
+            border: 1px solid rgb(11, 10, 83);
+        }
+
+        .language-item .menu {
+            padding-left: 20px;
+            max-height: 0;
+            transition: max-height 1s ease-out;
+            overflow: hidden;
+        }
+
+        .language-item.open .menu {
+            transition: max-height 2s ease-in;
+            max-height: 10000px;
+        }
+
+        .menu > .menu-item {
+            list-style: none;
+            padding: 10px;
             font-size: 130%;
             font-weight: bold;
         }
 
-        .menu>.menu-item>.menu-link {
+        .menu > .menu-item > .menu-link {
             text-decoration: none;
             color: rgb(59, 104, 218);
             transition: .3s;
         }
 
-        .menu>.menu-item>.menu-link:hover {
+        .menu > .menu-item > .menu-link:hover {
             color: rgb(16, 44, 116);
         }
     </style>
@@ -29,22 +95,44 @@
 <body>
     <div class="container">
         <div class="page-title">
-            <h2>Mục Lục</h2>
+            <h2>Danh Mục</h2>
         </div>
         <div class="page-content">
-            <ul class="menu">
-                <li class="menu-item"><a href="./session1/index.html" class="menu-link">Bài 1: Giới thiệu về HTML</a>
+            <ul class="language-list">
+                <li class="language-item">
+                    <h3>Học Lập trình HTML</h3>
+                    <ul class="menu">
+                        <li class="menu-item"><a href="./html/session1/index.html" class="menu-link">Bài 1: Giới thiệu về HTML</a>
+                        </li>
+                        <li class="menu-item"><a href="./html/session2/index.html" class="menu-link">Bài 2: Văn bản và danh sách</a>
+                        </li>
+                        <li class="menu-item"><a href="./html/session3/index.html" class="menu-link">Bài 3: Image, Link, Table</a>
+                        </li>
+                        <li class="menu-item"><a href="./html/session4/index.html" class="menu-link">Bài 4: Form</a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="menu-item"><a href="./session2/index.html" class="menu-link">Bài 2: Văn bản và danh sách</a>
-                </li>
-                <li class="menu-item"><a href="./session3/index.html" class="menu-link">Bài 3: Image, Link, Table</a>
-                </li>
-                <li class="menu-item"><a href="./session4/index.html" class="menu-link">Bài 4: Form</a>
+                <li class="language-item">
+                    <h3>Học Lập trình CSS</h3>
+                    <ul class="menu">
+                        <li class="menu-item"><a href="./css/session1/index.html" class="menu-link">Bài 1: Tìm hiểu CSS</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
     </div>
     <script src="./assets/js//main.js"></script>
+    <script>
+        var languageItems = document.querySelectorAll(".language-item");
+
+        languageItems.forEach(language => {
+            var langugeTitle = language.querySelector('h3');
+            langugeTitle.onclick = () => {
+                language.classList.toggle('open')
+            };
+        });
+    </script>
 </body>
 
 </html>
