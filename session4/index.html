@@ -264,6 +264,22 @@
                             </div>
                         </li>
                         <li>
+                            <h4 class="small-title">File field</h4>
+                            <div class="session-sub-content">
+                                <div class="example">
+                                    <span class="example-title">type="file"</span>
+                                    <noscript class="code">
+                                        <input type="file">
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kết quả: </span>
+                                        <input type="file">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
                             <h4 class="small-title">Lable</h4>
                             <div class="session-sub-content">
                                 <div class="example">
@@ -361,7 +377,8 @@
                                         <form action="./form_demo_result.html" method="get">
                                             <input type="hidden" name="author" value="Long Đoài">
                                             <label>Họ và Tên</label> <br>
-                                            <input type="text" name="fullname" placeholder="Nhập họ và tên"> <br>
+                                            <input type="text" name="fullname" placeholder="Nhập họ và tên" required>
+                                            <br>
                                             <label>Email</label> <br>
                                             <input type="email" name="email" placeholder="Nhập email"> <br>
                                             <label>tuổi</label> <br>
@@ -372,22 +389,24 @@
                                             <label><input type="radio" name="an_chay" value="1" /> CÓ</label><br>
                                             <label><input type="radio" name="an_chay" value="0" /> KHÔNG</label><br>
                                             <label>Bạn thích những ai sau đây ?</label> <br>
-                                            <label><input type="checkbox" name="like_people" value="Trấn Thành" /> Trấn
-                                                Thành</label><br>
-                                            <label><input type="checkbox" name="like_people" value="Trường Giang" />
-                                                Trường Giang</label><br>
-                                            <label><input type="checkbox" name="like_people" value="Phương Hằng" />
-                                                Phương Hằng</label><br>
+                                            <label><input type="checkbox" name="like_people" value="Trấn Thành" />Trấn Thành</label><br>
+                                            <label><input type="checkbox" name="like_people" value="Trường Giang" />Trường Giang</label><br>
+                                            <label><input type="checkbox" name="like_people" value="Phương Hằng" />Phương Hằng</label><br>
                                             <label>Chọn giới tính</label> <br>
                                             <select name="gender">
                                                 <option value="0">Nam</option>
                                                 <option value="1">Nữ</option>
                                                 <option value="2">Khác</option>
                                             </select> <br>
+                                            <label>Chọn món ăn yêu thích</label> <br>
+                                            <select name="foods" multiple>
+                                                <option value="0">Mì tôm</option>
+                                                <option value="1">Cua hoàng đế</option>
+                                                <option value="2">Tôm hùm</option>
+                                            </select> <br>
                                             <label>Mô tả bản thân</label> <br>
                                             <textarea name="description" placeholder="Mô tả về bạn"></textarea> <br>
-                                            <label><input type="checkbox" name="argee"> Đồng ý với điều khoản chúng
-                                                tôi</label> <br>
+                                            <label><input type="checkbox" name="argee"> Đồng ý với điều khoản chúng tôi</label> <br>
                                             <input type="button" value="Hello Đoài" />
                                             <input type="reset" value="Nhập lại" />
                                             <input type="submit" value="Gửi" />
@@ -421,6 +440,12 @@
                                                 <option value="0">Nam</option>
                                                 <option value="1">Nữ</option>
                                                 <option value="2">Khác</option>
+                                            </select> <br>
+                                            <label>Chọn món ăn yêu thích</label> <br>
+                                            <select name="foods" multiple>
+                                                <option value="0">Mì tôm</option>
+                                                <option value="1">Cua hoàng đế</option>
+                                                <option value="2">Tôm hùm</option>
                                             </select> <br>
                                             <label>Mô tả bản thân</label> <br>
                                             <textarea name="description" placeholder="Mô tả về bạn"></textarea> <br>
