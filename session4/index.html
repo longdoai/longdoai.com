@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4 - Form</title>
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td {
+            padding: 5px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-title">
+            <h2>Bài 4 - Form</h2>
+        </div>
+        <div class="page-content">
+            <ol type="I" class="session-list">
+                <li>
+                    <h3 class="sub-title">Form</h3>
+                    <ol type="1" class="session-sub-list">
+                        <li>
+                            <h4 class="small-title">Cú pháp</h4>
+                            <div class="session-sub-content">
+                                <noscript class="code">
+                                    <from action="url" method="method">
+                                        <!-- code  -->
+                                    </from>
+                                </noscript>
+                            </div>
+                        </li>
+                        <li>
+                            <h4 class="small-title">Thuộc tính</h4>
+                            <div class="session-sub-content">
+                                <ul class="mark">
+                                    <li>
+                                        <h5 class="mark-title">action</h5>
+                                        <div>
+                                            Đường dẫn để gửi dữ liệu sang trang đó.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h5 class="mark-title">method</h5>
+                                        <div>
+                                            GET / POST
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h3 class="sub-title">Input</h3>
+                    <ol type="1" class="session-sub-list">
+                        <li>
+                            <h4 class="small-title">Cú pháp</h4>
+                            <div class="session-sub-content">
+                                <noscript class="code">
+                                    <input type="type_name" name="name" value="value" />
+                                </noscript>
+                            </div>
+                        </li>
+                        <li>
+                            <h4 class="small-title">Thuộc tính</h4>
+                            <div class="session-sub-content">
+                                <ul class="mark">
+                                    <li>
+                                        <h5 class="mark-title">type</h5>
+                                        <div>
+                                            Kiểu của trường.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h5 class="mark-title">name</h5>
+                                        <div>
+                                            Tên trường
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h4 class="small-title">Text field</h4>
+                            <div class="session-sub-content">
+                                <div class="example">
+                                    <span class="example-title">type="text"</span>
+                                    <noscript class="code">
+                                        <input type="text" value="longdoai">
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kết quả: </span>
+                                        <input type="text" value="longdoai" placeholder="Nhập tên">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h4 class="small-title">Number field</h4>
+                            <div class="session-sub-content">
+                                <div class="example">
+                                    <span class="example-title">type="number"</span>
+                                    <noscript class="code">
+                                        <input type="number" min="10" max="100" step="5" />
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kết quả: </span>
+                                        <input type="number" min="10" max="100" step="5" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h4 class="small-title">Pasword field</h4>
+                            <div class="session-sub-content">
+                                <div class="example">
+                                    <span class="example-title">type="password"</span>
+                                    <noscript class="code">
+                                        <input type="password" />
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kết quả: </span>
+                                        <input type="password" placeholder="Nhập mật khẩu" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h4 class="small-title">Email field</h4>
+                            <div class="session-sub-content">
+                                <div class="example">
+                                    <span class="example-title">type="email"</span>
+                                    <noscript class="code">
+                                        <input type="email" />
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kết quả: </span>
+                                        <input type="email" placeholder="Nhập email" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h4 class="small-title">Submit field</h4>
+                            <div class="session-sub-content">
+                                <div class="example">
+                                    <span class="example-title">type="submit"</span>
+                                    <noscript class="code">
+                                        <input type="submit" value="Gửi" />
+                                        <button type="submit">Gửi</button>
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kết quả: </span>
+                                        <input type="submit" value="Gửi" />
+                                        <button type="submit">Gửi</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h4 class="small-title">Button</h4>
+                            <div class="session-sub-content">
+                                <div class="example">
+                                    <span class="example-title">type="button"</span>
+                                    <noscript class="code">
+                                        <input type="button" value="Click me" />
+                                        <button>Click me</button>
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kết quả: </span>
+                                        <input type="button" value="Click me" />
+                                        <button>Click me</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h4 class="small-title">Checkbox</h4>
+                            <div class="session-sub-content">
+                                <div class="example">
+                                    <span class="example-title">type="checkbox"</span>
+                                    <noscript class="code">
+                                        <input type="checkbox" /> Đồng ý?
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kết quả: </span>
+                                        <input type="checkbox" /> Đồng ý?
+                                    </div>
+                                </div>
+                                <div class="example">
+                                    <span class="example-title">Multi checkbox</span>
+                                    <noscript class="code">
+                                        Bạn thích ai? <br>
+                                        <input type="checkbox" name="like" /> Long Đoài <br>
+                                        <input type="checkbox" name="like" /> Huy Huấn
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kết quả: </span>
+                                        Bạn thích ai? <br>
+                                        <input type="checkbox" name="like" /> Long Đoài <br>
+                                        <input type="checkbox" name="like" /> Huy Huấn
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h4 class="small-title">Radio</h4>
+                            <div class="session-sub-content">
+                                <div class="example">
+                                    <span class="example-title">type="radio"</span>
+                                    <noscript class="code">
+                                        <input type="radio" /> Select me
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kết quả: </span>
+                                        <input type="radio" /> Select me
+                                    </div>
+                                </div>
+                                <div class="example">
+                                    <span class="example-title">Multi radio</span>
+                                    <noscript class="code">
+                                        Bạn thích ai? <br>
+                                        <input type="radio" name="like" /> Long Đoài <br>
+                                        <input type="radio" name="like" /> Huy Huấn
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kết quả: </span>
+                                        Bạn thích ai? <br>
+                                        <input type="radio" name="like" checked /> Long Đoài <br>
+                                        <input type="radio" name="like" /> Huy Huấn
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h4 class="small-title">Hidden</h4>
+                            <div class="session-sub-content">
+                                <noscript class="code">
+                                    <input type="hidden" value="hidden" />
+                                </noscript>
+                            </div>
+                        </li>
+                        <li>
+                            <h4 class="small-title">Lable</h4>
+                            <div class="session-sub-content">
+                                <div class="example">
+                                    <span class="example-title">Label example</span>
+                                    <noscript class="code">
+                                        <form action="">
+                                            <label>Tài khoản</label> <br>
+                                            <input type="text" placeholder="Nhập tài khoản"> <br>
+                                            <label>Mật khẩu</label>
+                                            <input type="password" placeholder="Nhập mật khẩu"> <br>
+                                            <label><input type="checkbox"> Duy trì đăng nhập</label> <br>
+                                            <input type="submit" value="Đăng nhập">
+                                        </form>
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kết quả: </span>
+                                        <form action="">
+                                            <label>Tài khoản</label> <br>
+                                            <input type="text" placeholder="Nhập tài khoản"> <br>
+                                            <label>Mật khẩu</label> <br>
+                                            <input type="password" placeholder="Nhập mật khẩu"> <br>
+                                            <label><input type="checkbox"> Duy trì đăng nhập</label> <br>
+                                            <input type="submit" value="Đăng nhập">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h3 class="sub-title">Select</h3>
+                    <ol type="1" class="session-sub-list">
+                        <li>
+                            <h4 class="small-title">Cú pháp</h4>
+                            <div class="session-sub-content">
+
+                                <div class="example">
+                                    <span class="example-title">Select example</span>
+                                    <noscript class="code">
+                                        <label>Chọn giới tính</label>
+                                        <select name="name">
+                                            <option value="male">Nam</option>
+                                            <option value="female" selected>Nữ</option>
+                                        </select>
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kết quả: </span>
+                                        <label>Chọn giới tính</label>
+                                        <select name="name">
+                                            <option value="male">Nam</option>
+                                            <option value="female" selected>Nữ</option>
+                                            <option value="other" disabled>Khác</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h3 class="sub-title">Textarea</h3>
+                    <ol type="1" class="session-sub-list">
+                        <li>
+                            <h4 class="small-title">Cú pháp</h4>
+                            <div class="session-sub-content">
+                                <div class="example">
+                                    <span class="example-title">Textarea example</span>
+                                    <noscript class="code">
+                                        <label>Nhập tin nhắn</label>
+                                        <textarea name="name" cols="100" rows="5"></textarea>
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kết quả: </span>
+                                        <label>Nhập tin nhắn</label>
+                                        <textarea name="name" cols="100" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </li>
+                <li id="form_demo">
+                    <h3 class="sub-title">Code ví dụ</h3>
+                    <ol type="1" class="session-sub-list">
+                        <li>
+                            <h4 class="small-title">Ví dụ về form</h4>
+                            <div class="session-sub-content">
+                                <div class="example">
+                                    <span class="example-title"></span>
+                                    <noscript class="code">
+                                        <form action="./form_demo_result.html" method="get">
+                                            <input type="hidden" name="author" value="Long Đoài">
+                                            <label>Họ và Tên</label> <br>
+                                            <input type="text" name="fullname" placeholder="Nhập họ và tên"> <br>
+                                            <label>Email</label> <br>
+                                            <input type="email" name="email" placeholder="Nhập email"> <br>
+                                            <label>tuổi</label> <br>
+                                            <input type="number" name="age" placeholder="Nhập số tuổi"> <br>
+                                            <label>Mật khẩu</label> <br>
+                                            <input type="password" name="password" placeholder="Nhập password"> <br>
+                                            <label>Bạn có ăn chay không?</label> <br>
+                                            <label><input type="radio" name="an_chay" value="1" /> CÓ</label><br>
+                                            <label><input type="radio" name="an_chay" value="0" /> KHÔNG</label><br>
+                                            <label>Bạn thích những ai sau đây ?</label> <br>
+                                            <label><input type="checkbox" name="like_people" value="Trấn Thành" /> Trấn
+                                                Thành</label><br>
+                                            <label><input type="checkbox" name="like_people" value="Trường Giang" />
+                                                Trường Giang</label><br>
+                                            <label><input type="checkbox" name="like_people" value="Phương Hằng" />
+                                                Phương Hằng</label><br>
+                                            <label>Chọn giới tính</label> <br>
+                                            <select name="gender">
+                                                <option value="0">Nam</option>
+                                                <option value="1">Nữ</option>
+                                                <option value="2">Khác</option>
+                                            </select> <br>
+                                            <label>Mô tả bản thân</label> <br>
+                                            <textarea name="description" placeholder="Mô tả về bạn"></textarea> <br>
+                                            <label><input type="checkbox" name="argee"> Đồng ý với điều khoản chúng
+                                                tôi</label> <br>
+                                            <input type="button" value="Hello Đoài" />
+                                            <input type="reset" value="Nhập lại" />
+                                            <input type="submit" value="Gửi" />
+                                        </form>
+                                    </noscript>
+
+                                    <div class="result">
+                                        <span class="result-title">Kết quả: </span>
+                                        <form action="./form_demo_result.html" method="get">
+                                            <input type="hidden" name="author" value="Long Đoài">
+                                            <label>Họ và Tên</label> <br>
+                                            <input type="text" name="fullname" placeholder="Nhập họ và tên"> <br>
+                                            <label>Email</label> <br>
+                                            <input type="email" name="email" placeholder="Nhập email"> <br>
+                                            <label>tuổi</label> <br>
+                                            <input type="number" name="age" placeholder="Nhập số tuổi"> <br>
+                                            <label>Mật khẩu</label> <br>
+                                            <input type="password" name="password" placeholder="Nhập password"> <br>
+                                            <label>Bạn có ăn chay không?</label> <br>
+                                            <label><input type="radio" name="an_chay" value="1" /> CÓ</label><br>
+                                            <label><input type="radio" name="an_chay" value="0" /> KHÔNG</label><br>
+                                            <label>Bạn thích những ai sau đây ?</label> <br>
+                                            <label><input type="checkbox" name="like_people" value="Trấn Thành" /> Trấn
+                                                Thành</label><br>
+                                            <label><input type="checkbox" name="like_people" value="Trường Giang" />
+                                                Trường Giang</label><br>
+                                            <label><input type="checkbox" name="like_people" value="Phương Hằng" />
+                                                Phương Hằng</label><br>
+                                            <label>Chọn giới tính</label> <br>
+                                            <select name="gender">
+                                                <option value="0">Nam</option>
+                                                <option value="1">Nữ</option>
+                                                <option value="2">Khác</option>
+                                            </select> <br>
+                                            <label>Mô tả bản thân</label> <br>
+                                            <textarea name="description" placeholder="Mô tả về bạn"></textarea> <br>
+                                            <label><input type="checkbox" name="argee"> Đồng ý với điều khoản chúng
+                                                tôi</label> <br>
+                                            <input type="button" id="alert" value="Hello Đoài" />
+                                            <input type="reset" value="Nhập lại" />
+                                            <input type="submit" value="Gửi" />
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div id="btn_home"></div>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('alert').onclick = function (e) {
+            alert(e.target.value);
+        }
+    </script>
+</body>
+
+</html>

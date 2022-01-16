@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết Qủa form demo</title>
+</head>
+
+<body>
+    <div id="result">
+        <ol>
+            <li><b>Họ và tên: </b> <span id="fullname"></span></li>
+            <li><b>Email: </b> <span id="email"></span></li>
+            <li><b>Tuổi: </b> <span id="age"></span></li>
+            <li><b>Mật khẩu: </b> <span id="password"></span></li>
+            <li><b>Ăn Chay: </b> <span id="an_chay"></span></li>
+            <li><b>Thích nghệ sỹ: </b> <span id="like_people"></span></li>
+            <li><b>Giới tính: </b> <span id="gender"></span></li>
+            <li><b>Mô tả: </b> <span id="description"></span></li>
+            <li><b>Đồng ý điều khoản: </b> <span id="argee"></span></li>
+        </ol>
+    </div>
+    <a href="./index.html#form_demo">Quay lại</a>
+    <script>
+        var url_string = window.location.href
+        var url = new URL(window.location.href);
+        var fullname = url.searchParams.get("fullname");
+        var email = url.searchParams.get("email");
+        var age = url.searchParams.get("age");
+        var password = url.searchParams.get("password");
+        var anChay = url.searchParams.get("an_chay");
+        var likePeople = url.searchParams.getAll("like_people");
+        var gender = url.searchParams.get("gender");
+        var description = url.searchParams.get("description");
+        var argee = url.searchParams.get("argee");
+
+        argee = argee == "on" ? "Có" : "Không";
+
+        if(gender){
+        gender = gender == 0 ? "Nam" : (gender == 1) ? "Nữ" : "Khác";  
+        }
+        if(anChay) {
+            anChay = anChay == 0 ? "Không" : "Có"; 
+        }
+
+        document.getElementById('fullname').innerText = fullname;
+        document.getElementById('email').innerText = email;
+        document.getElementById('age').innerText = age;
+        document.getElementById('password').innerText = password;
+        document.getElementById('an_chay').innerText = anChay;
+        document.getElementById('like_people').innerText = likePeople.join(', ');
+        document.getElementById('gender').innerText = gender;
+        document.getElementById('description').innerText = description;
+        document.getElementById('argee').innerText = argee;
+    </script>
+</body>
+
+</html>

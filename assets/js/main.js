@@ -247,6 +247,7 @@ function handleRenderCode() {
 
 function handleStyleExample() {
   var divEx = document.querySelectorAll('div.example');
+  console.log(divEx)
   divEx.forEach(ex => {
     var viewMore = document.createElement('span');
     viewMore.className = "viewmore";
