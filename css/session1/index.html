@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài 1 - Tìm hiểu về CSS</title>
     <link rel="stylesheet" href="../../assets/style/style.css">
+    <link rel="stylesheet" href="./syntax.css">
     <style>
-        table,
-        td,
-        th {
+        table, td, th {
             border: 1px solid black;
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
             border-collapse: collapse;
             text-align: center;
         }
@@ -19,18 +21,71 @@
         td {
             padding: 5px 20px;
         }
+
+        h3 {
+            color: blue;
+            font-size: 40px;
+        }
+
+        .sub-title { /*dấu . => class*/
+            color: blueviolet;
+        }
+
+        h3.sub-title { /*h3 có class sub-title*/
+            color: blueviolet;
+        }
+        
+        #sub_title { /*dấu # => id*/
+            color: burlywood;
+        }
+
+        h3#sub_title { /*h3 có id sub_title*/
+            color: burlywood;
+        }
+
+        #page_content_first h3{/*dấu cách => tất cả phần tử con*/
+            color: red;
+        }
+
+        #page_content_first > h3{/*dấu > => phần tử con trực tiếp*/
+            color: green;
+        }
+
+        #page_content_first > h3:hover {
+            background-color: rgb(238, 160, 248);
+        }
+
+        #page_content_first > div h3{/*h3 là phần tử con cảu div, div là thẻ con trực tiếp của id page_content_first*/
+            color: rgb(119, 128, 0);
+        }
+
+        #page_content_first > h3.sub-title, #page_content_first > h3#sub_title {
+            background-color: chartreuse;
+        }
+        
+        #page_content_first + li {/*dấu + => a e liền kề */
+            background-color: cadetblue;
+        }
+        div * {/*dấu * => đại diện tất cả*/
+            font-size: 20px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <div class="page-title">
-            <h2>Bài 1 - Tìm hiểu về CSS</h2>
+            <h2 style="color: red; font-size: 50px;">Bài 1 - Tìm hiểu về CSS</h2>
         </div>
         <div class="page-content">
             <ol type="I" class="session-list">
-                <li>
+                <li id="page_content_first">
+                    <h3>Khái niệm</h3>
                     <h3 class="sub-title">Khái niệm</h3>
+                    <h3 id="sub_title">Khái niệm</h3>
+                    <div>
+                        <h3>Test</h3>
+                    </div>
                 </li>
                 <li>
                     <h3 class="sub-title">Cách chèn code CSS vào file HTMl</h3>
